@@ -2,7 +2,7 @@ const {ActionsOnGoogleTestManager} = require('@assistant/conversation-testing');
 
 const PROJECT_ID = 'barista-3b2b6';
 const TRIGGER_PHRASE = 'Falar com a Barista';
-const DEFAULT_LOCALE = 'pt-BR'
+const DEFAULT_LOCALE = 'pt-BR';
 
 describe('Test Barista', function () {
   this.timeout(60000);
