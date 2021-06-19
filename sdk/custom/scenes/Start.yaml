@@ -9,4 +9,6 @@ onEnter:
     - promptResponse:
         firstSimple:
           variants:
-          - speech: Hora do café!
+          - speech: Eu ouvi café?
+          - speech: Olá!
+          - speech: Oi!
