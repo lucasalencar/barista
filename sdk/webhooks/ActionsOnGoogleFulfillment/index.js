@@ -26,21 +26,24 @@ app.handle('start_scene_initial_prompt', (conv) => {
   conv.add('Hello world from fulfillment');
 });
 
-const v60_timer_content = `
+
+app.handle('v60_timer', (conv) => {
+  let timing = [25, 20, 45, 90];
+
+  const v60_timer_content = `
 <speak>
   <p>Comece a colocar a água fervendo até 100 gramas.</p>
-  <break time="25" />
+  <break time="${timing[0]}" />
   <p>25 segundos. Ligue a chaleira novamente.</p>
-  <break time="20" />
+  <break time="${timing[1]}" />
   <p>45 segundos. Coloque a água até 225 gramas.</p>
-  <break time="45" />
+  <break time="${timing[2]}" />
   <p>1 minuto e 30 segundos. Coloque a água até 425 gramas.</p>
-  <break time="90" />
+  <break time="${timing[3]}" />
   <p>3 minutos e 45 segundos. Só aguardar o café terminar de filtrar.</p>
 </speak>
 `;
 
-app.handle('v60_timer', (conv) => {
   conv.add(v60_timer_content);
 });
 

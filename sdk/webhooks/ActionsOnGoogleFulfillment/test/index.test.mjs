@@ -26,6 +26,11 @@ describe('Test Barista', function () {
     await testManager.sendQuery('vamos fazer café');
     testManager.assertIntent('v60_timer');
     testManager.assertSpeech('Comece a colocar a água fervendo até 100 gramas.', {isExact: false});
-  });
 
+    // Test timers
+    testManager.assertSpeech('<break time="20"', {isExact: false});
+    testManager.assertSpeech('<break time="25"', {isExact: false});
+    testManager.assertSpeech('<break time="45"', {isExact: false});
+    testManager.assertSpeech('<break time="90"', {isExact: false});
+  });
 });
