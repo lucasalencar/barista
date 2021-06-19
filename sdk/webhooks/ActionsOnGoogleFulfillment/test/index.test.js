@@ -1,6 +1,4 @@
-import 'mocha';
-
-import {ActionsOnGoogleTestManager} from '@assistant/conversation-testing';
+const {ActionsOnGoogleTestManager} = require('@assistant/conversation-testing');
 
 const PROJECT_ID = 'barista-3b2b6';
 const TRIGGER_PHRASE = 'Falar com a Barista';
