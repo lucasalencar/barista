@@ -32,5 +32,7 @@ describe('Test Barista', function () {
     testManager.assertSpeech('<break time="25"', {isExact: false});
     testManager.assertSpeech('<break time="45"', {isExact: false});
     testManager.assertSpeech('<break time="90"', {isExact: false});
+
+    testManager.assertConversationEnded();
   });
 });
