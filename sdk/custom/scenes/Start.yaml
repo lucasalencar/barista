@@ -15,4 +15,3 @@ onEnter:
         firstSimple:
           variants:
           - speech: Hora do café!
-  webhookHandler: start_scene_initial_prompt
