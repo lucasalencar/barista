@@ -1,11 +1,5 @@
 intentEvents:
 - handler:
-    staticPrompt:
-      candidates:
-      - promptResponse:
-          firstSimple:
-            variants:
-            - speech: Ok, pode se preparar para o café!
     webhookHandler: v60_timer
   intent: v60_timer
   transitionToScene: actions.scene.END_CONVERSATION
