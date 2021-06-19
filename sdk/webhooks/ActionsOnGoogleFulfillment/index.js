@@ -34,19 +34,22 @@ const absolute_timing_seconds = [
   3*60 + 45 // 3:45
 ];
 
+const timing_discounts = [0, 4, 6, 5];
+
 app.handle('v60_timer', (conv) => {
-  let timing = helpers.relative_timings_seconds(absolute_timing_seconds);
+  let relative_timings = helpers.relative_timings_seconds(absolute_timing_seconds);
+  let timings = helpers.timing_discounts(relative_timings, timing_discounts);
 
   const v60_timer_content = `
 <speak>
   <p>Comece a colocar a água fervendo até 100 gramas.</p>
-  <break time="${timing[0]}" />
+  <break time="${timings[0]}" />
   <p>25 segundos. Ligue a chaleira novamente.</p>
-  <break time="${timing[1]}" />
+  <break time="${timings[1]}" />
   <p>45 segundos. Coloque a água até 225 gramas.</p>
-  <break time="${timing[2]}" />
+  <break time="${timings[2]}" />
   <p>1 minuto e 30 segundos. Coloque a água até 425 gramas.</p>
-  <break time="${timing[3]}" />
+  <break time="${timings[3]}" />
   <p>3 minutos e 45 segundos. Só aguardar o café terminar de filtrar.</p>
 </speak>
 `;
