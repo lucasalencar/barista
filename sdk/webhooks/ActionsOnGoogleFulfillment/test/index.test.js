@@ -26,10 +26,10 @@ describe('Test Barista', function () {
     testManager.assertSpeech('Comece a colocar a água fervendo até 100 gramas.', {isExact: false});
 
     // Test timers
-    testManager.assertSpeech('<break time="20"', {isExact: false});
     testManager.assertSpeech('<break time="25"', {isExact: false});
-    testManager.assertSpeech('<break time="45"', {isExact: false});
-    testManager.assertSpeech('<break time="90"', {isExact: false});
+    testManager.assertSpeech('<break time="15"', {isExact: false});
+    testManager.assertSpeech('<break time="39"', {isExact: false});
+    testManager.assertSpeech('<break time="129"', {isExact: false});
 
     testManager.assertConversationEnded();
   });

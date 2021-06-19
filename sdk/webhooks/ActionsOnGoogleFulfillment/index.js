@@ -34,7 +34,7 @@ const absolute_timing_seconds = [
   3*60 + 45 // 3:45
 ];
 
-const timing_discounts = [0, 4, 6, 5];
+const timing_discounts = [0, 5, 6, 6];
 
 app.handle('v60_timer', (conv) => {
   let relative_timings = helpers.relative_timings_seconds(absolute_timing_seconds);
