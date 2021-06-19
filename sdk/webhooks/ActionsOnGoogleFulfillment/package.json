@@ -6,15 +6,18 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint \"**/*.js\"",
-    "lint:fix": "eslint --fix \"**/*.js\""
+    "lint:fix": "eslint --fix \"**/*.js\"",
+    "test": "mocha"
   },
   "engines": {
     "node": "10"
   },
   "dependencies": {
     "@assistant/conversation": "^3.0.0",
+    "@assistant/conversation-testing": "^1.0.0",
     "firebase-admin": "~8.12.1",
-    "firebase-functions": "^3.6.2"
+    "firebase-functions": "^3.6.2",
+    "mocha": "^9.0.1"
   },
   "devDependencies": {
     "eslint": "^5.2.0",
