@@ -1,5 +1,12 @@
-conditionalEvents:
-- condition: "True"
+intentEvents:
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: Ok, pode se preparar para o café!
+  intent: v60_timer
   transitionToScene: actions.scene.END_CONVERSATION
 onEnter:
   staticPrompt:
@@ -7,5 +14,5 @@ onEnter:
     - promptResponse:
         firstSimple:
           variants:
-          - speech: ' and hello world from the console!'
+          - speech: Hora do café!
   webhookHandler: start_scene_initial_prompt
