@@ -2,4 +2,4 @@
 set -euo pipefail
 
 gactions push
-gactions deploy previw
+gactions deploy preview
