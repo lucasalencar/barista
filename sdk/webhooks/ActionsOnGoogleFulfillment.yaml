@@ -1,2 +1,4 @@
+handlers:
+- name: v60_timer
 inlineCloudFunction:
   executeFunction: ActionsOnGoogleFulfillment
