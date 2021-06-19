@@ -16,6 +16,7 @@
 
 const {conversation} = require('@assistant/conversation');
 const functions = require('firebase-functions');
+const helpers = require('./helpers');
 
 const app = conversation({debug: true});
 
@@ -26,9 +27,15 @@ app.handle('start_scene_initial_prompt', (conv) => {
   conv.add('Hello world from fulfillment');
 });
 
+const absolute_timing_seconds = [
+  25, // 0:25
+  45, // 0:45
+  60 + 30, // 1:30
+  3*60 + 45 // 3:45
+];
 
 app.handle('v60_timer', (conv) => {
-  let timing = [25, 20, 45, 90];
+  let timing = helpers.relative_timings_seconds(absolute_timing_seconds);
 
   const v60_timer_content = `
 <speak>
