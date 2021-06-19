@@ -3,9 +3,9 @@ defaultLocale: pt-BR
 localizedSettings:
   developerEmail: alencar.lucas.a@gmail.com
   developerName: Lucas Alencar
-  displayName: O Barista
+  displayName: A Barista
   fullDescription: A personal barista that helps you make coffee
-  pronunciation: O Barista
+  pronunciation: A Barista
   shortDescription: A personal barista that helps you make coffee
-  voice: male_1
+  voice: female_1
 projectId: barista-3b2b6
