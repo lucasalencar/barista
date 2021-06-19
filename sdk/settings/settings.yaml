@@ -1,13 +1,11 @@
 category: GAMES_AND_TRIVIA
-defaultLocale: en
+defaultLocale: pt-BR
 localizedSettings:
-  developerEmail:
-  developerName:
-  displayName: Hello world sample
-  fullDescription:
-  privacyPolicyUrl:
-  pronunciation: Hello world sample
-  shortDescription:
-  smallLogoImage:
-  termsOfServiceUrl:
-projectId: <PROJECT_ID>
+  developerEmail: alencar.lucas.a@gmail.com
+  developerName: Lucas Alencar
+  displayName: O Barista
+  fullDescription: A personal barista that helps you make coffee
+  pronunciation: O Barista
+  shortDescription: A personal barista that helps you make coffee
+  voice: female_1
+projectId: barista-3b2b6
