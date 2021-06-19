@@ -19,4 +19,13 @@ describe('Test Barista', function () {
   afterEach(function () {
     testManager.cleanUpAfterTest();
   });
+
+  it('trigger v60_timer', async function() {
+    await testManager.sendQuery(TRIGGER_PHRASE);
+
+    await testManager.sendQuery('vamos fazer café');
+    testManager.assertIntent('v60_timer');
+    testManager.assertSpeech('Comece a colocar a água fervendo até 100 gramas.', {isExact: false});
+  });
+
 });
