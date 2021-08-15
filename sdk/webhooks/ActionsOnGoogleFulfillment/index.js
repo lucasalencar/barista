@@ -34,27 +34,15 @@ const absolute_timing_seconds = [
   3*60 + 45 // 3:45
 ];
 
+const  testing_timing_seconds = [1,6,7,7];
+
 const timing_discounts = [0, 5, 6, 6];
 
 app.handle('v60_timer', (conv) => {
-  let relative_timings = helpers.relative_timings_seconds(absolute_timing_seconds);
-  let timings = helpers.timing_discounts(relative_timings, timing_discounts);
-
-  const v60_timer_content = `
-<speak>
-  <p>Comece a colocar a água fervendo até 100 gramas.</p>
-  <break time="${timings[0]}s" />
-  <p>${helpers.say_as_duration(absolute_timing_seconds[0])}. Ligue a chaleira novamente.</p>
-  <break time="${timings[1]}s" />
-  <p>${helpers.say_as_duration(absolute_timing_seconds[1])}. Coloque a água até 225 gramas.</p>
-  <break time="${timings[2]}s" />
-  <p>${helpers.say_as_duration(absolute_timing_seconds[2])}. Coloque a água até 425 gramas.</p>
-  <break time="${timings[3]}s" />
-  <p>${helpers.say_as_duration(absolute_timing_seconds[3])}. Só aguardar o café terminar de filtrar.</p>
-</speak>
-`;
-
-  conv.add(v60_timer_content);
+  conv.add(helpers.v60_timer_recipe(
+    absolute_timing_seconds,
+    timing_discounts
+  ));
 });
 
 exports.ActionsOnGoogleFulfillment = functions.https.onRequest(app);

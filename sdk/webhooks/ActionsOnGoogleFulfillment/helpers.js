@@ -42,3 +42,24 @@ exports.say_as_duration = function(seconds) {
 
   return output.join(' e ');
 };
+
+exports.v60_timer_recipe = function(absolute_timing_seconds, timing_discounts) {
+  let relative_timings = exports.relative_timings_seconds(absolute_timing_seconds);
+  let timings = exports.timing_discounts(relative_timings, timing_discounts);
+
+  const v60_timer_content = `
+<speak>
+  <p>Comece a colocar a água fervendo até 100 gramas.</p>
+  <break time="${timings[0]}s" />
+  <p>${exports.say_as_duration(absolute_timing_seconds[0])}. Ligue a chaleira novamente.</p>
+  <break time="${timings[1]}s" />
+  <p>${exports.say_as_duration(absolute_timing_seconds[1])}. Coloque a água até 225 gramas.</p>
+  <break time="${timings[2]}s" />
+  <p>${exports.say_as_duration(absolute_timing_seconds[2])}. Coloque a água até 425 gramas.</p>
+  <break time="${timings[3]}s" />
+  <p>${exports.say_as_duration(absolute_timing_seconds[3])}. Só aguardar o café terminar de filtrar.</p>
+</speak>
+`;
+
+  return v60_timer_content;
+};
