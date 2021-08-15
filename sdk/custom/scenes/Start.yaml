@@ -3,6 +3,10 @@ intentEvents:
     webhookHandler: v60_timer
   intent: v60_timer
   transitionToScene: actions.scene.END_CONVERSATION
+- handler:
+    webhookHandler: v60_timer_afternoon
+  intent: v60_timer_afternoon
+  transitionToScene: actions.scene.END_CONVERSATION
 onEnter:
   staticPrompt:
     candidates:
