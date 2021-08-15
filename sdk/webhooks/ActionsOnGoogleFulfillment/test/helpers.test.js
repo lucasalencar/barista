@@ -18,3 +18,13 @@ describe('timing_discounts', function() {
     assert.deepEqual(helpers.timing_discounts([25, 20, 45, 135], [0, 4, 6, 5]), [25, 16, 39, 130]);
   });
 });
+
+describe('format_seconds_to_duration', function() {
+  it('formats seconds', function() {
+    assert.deepEqual(helpers.format_seconds_to_duration(1), "00:01");
+    assert.deepEqual(helpers.format_seconds_to_duration(45), "00:45");
+    assert.deepEqual(helpers.format_seconds_to_duration(60), "01:00");
+    assert.deepEqual(helpers.format_seconds_to_duration(61), "01:01");
+    assert.deepEqual(helpers.format_seconds_to_duration(60+30), "01:30");
+  });
+});
