@@ -28,3 +28,10 @@ describe('format_seconds_to_duration', function() {
     assert.deepEqual(helpers.format_seconds_to_duration(60+30), "01:30");
   });
 });
+
+describe('say_as_duration', function() {
+  it('returns say-as tag with duration interpretation', function() {
+    assert.deepEqual(helpers.say_as_duration(1), '<say-as interpret-as="duration" format="m:s">00:01</say-as>');
+    assert.deepEqual(helpers.say_as_duration(60), '<say-as interpret-as="duration" format="m:s">01:00</say-as>');
+  });
+});

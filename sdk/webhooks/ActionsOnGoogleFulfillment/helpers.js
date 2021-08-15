@@ -23,3 +23,7 @@ exports.format_seconds_to_duration = function(seconds) {
   const duration = new Date(0, 0, 0, 0, 0, seconds, 0);
   return dateFormat(duration, "MM:ss");
 };
+
+exports.say_as_duration = function(seconds) {
+  return `<say-as interpret-as="duration" format="m:s">${exports.format_seconds_to_duration(seconds)}</say-as>`;
+};
