@@ -4,6 +4,6 @@ handler:
     - promptResponse:
         firstSimple:
           variants:
-          - speech: Acho que você quer pedir mais tarde. Até mais.
-            text: Acho que você quer pedir mais tarde. Até mais.
+          - speech: Não consigo entender o que você está pedindo. Até logo!
+            text: Não consigo entender o que você está pedindo. Até logo!
 transitionToScene: actions.scene.END_CONVERSATION

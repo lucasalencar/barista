@@ -4,5 +4,5 @@ handler:
     - promptResponse:
         firstSimple:
           variants:
-          - speech: Sorry, I didn't catch that. Can you try again?
-            text: Sorry, I didn't catch that. Can you try again?
+          - speech: Vamos fazer café?
+            text: Vamos fazer café?
