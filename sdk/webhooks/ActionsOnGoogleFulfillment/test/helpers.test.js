@@ -31,7 +31,12 @@ describe('format_seconds_to_duration', function() {
 
 describe('say_as_duration', function() {
   it('returns say-as tag with duration interpretation', function() {
-    assert.deepEqual(helpers.say_as_duration(1), '<say-as interpret-as="duration" format="m:s">00:01</say-as>');
-    assert.deepEqual(helpers.say_as_duration(60), '<say-as interpret-as="duration" format="m:s">01:00</say-as>');
+    assert.deepEqual(helpers.say_as_duration(1), '1 segundo');
+    assert.deepEqual(helpers.say_as_duration(2), '2 segundos');
+    assert.deepEqual(helpers.say_as_duration(25), '25 segundos');
+    assert.deepEqual(helpers.say_as_duration(60), '1 minuto');
+    assert.deepEqual(helpers.say_as_duration(61), '1 minuto e 1 segundo');
+    assert.deepEqual(helpers.say_as_duration(70), '1 minuto e 10 segundos');
+    assert.deepEqual(helpers.say_as_duration(3*60 + 45), '3 minutos e 45 segundos');
   });
 });

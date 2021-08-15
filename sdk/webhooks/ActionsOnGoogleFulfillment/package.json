@@ -18,7 +18,8 @@
     "dateformat": "^4.5.1",
     "firebase-admin": "~8.12.1",
     "firebase-functions": "^3.6.2",
-    "mocha": "^9.0.1"
+    "mocha": "^9.0.1",
+    "pluralize-ptbr": "^1.0.3"
   },
   "devDependencies": {
     "eslint": "^5.2.0",
