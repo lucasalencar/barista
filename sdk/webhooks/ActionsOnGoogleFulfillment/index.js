@@ -47,8 +47,6 @@ app.handle('v60_timer', (conv) => {
 });
 
 app.handle('v60_timer_afternoon', (conv) => {
-  conv.add('Receita para 20 gramas de café.');
-
   conv.add(helpers.v60_timer_recipe(
     absolute_timing_seconds,
     timing_discounts,
