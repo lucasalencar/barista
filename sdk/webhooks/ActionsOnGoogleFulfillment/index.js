@@ -41,7 +41,8 @@ const timing_discounts = [0, 5, 6, 6];
 app.handle('v60_timer', (conv) => {
   conv.add(helpers.v60_timer_recipe(
     absolute_timing_seconds,
-    timing_discounts
+    timing_discounts,
+    [100, 225, 425]
   ));
 });
 

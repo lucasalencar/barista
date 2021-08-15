@@ -44,16 +44,16 @@ describe('say_as_duration', function() {
 describe('v60_timer_recipe', function() {
   it('returns whole recipe', function() {
     assert.deepEqual(
-      helpers.v60_timer_recipe([1,2,3,4], [0,0,0,0]),
+      helpers.v60_timer_recipe([1,2,3,4], [0,0,0,0], [10, 20, 30]),
       `
 <speak>
-  <p>Comece a colocar a água fervendo até 100 gramas.</p>
+  <p>Comece a colocar a água fervendo até 10 gramas.</p>
   <break time="1s" />
   <p>1 segundo. Ligue a chaleira novamente.</p>
   <break time="1s" />
-  <p>2 segundos. Coloque a água até 225 gramas.</p>
+  <p>2 segundos. Coloque a água até 20 gramas.</p>
   <break time="1s" />
-  <p>3 segundos. Coloque a água até 425 gramas.</p>
+  <p>3 segundos. Coloque a água até 30 gramas.</p>
   <break time="1s" />
   <p>4 segundos. Só aguardar o café terminar de filtrar.</p>
 </speak>
