@@ -44,13 +44,13 @@ app.handle('v60_timer', (conv) => {
 <speak>
   <p>Comece a colocar a água fervendo até 100 gramas.</p>
   <break time="${timings[0]}s" />
-  <p>25 segundos. Ligue a chaleira novamente.</p>
+  <p>${helpers.say_as_duration(absolute_timing_seconds[0])}. Ligue a chaleira novamente.</p>
   <break time="${timings[1]}s" />
-  <p>45 segundos. Coloque a água até 225 gramas.</p>
+  <p>${helpers.say_as_duration(absolute_timing_seconds[1])}. Coloque a água até 225 gramas.</p>
   <break time="${timings[2]}s" />
-  <p>1 minuto e 30 segundos. Coloque a água até 425 gramas.</p>
+  <p>${helpers.say_as_duration(absolute_timing_seconds[2])}. Coloque a água até 425 gramas.</p>
   <break time="${timings[3]}s" />
-  <p>3 minutos e 45 segundos. Só aguardar o café terminar de filtrar.</p>
+  <p>${helpers.say_as_duration(absolute_timing_seconds[3])}. Só aguardar o café terminar de filtrar.</p>
 </speak>
 `;
 
